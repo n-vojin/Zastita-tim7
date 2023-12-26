@@ -2,12 +2,12 @@
 
 - **Wifi ruter**
 - **Uredjaji povezani putem WiFi tehnologije**
-    - Smart telefon
-    - Televizor
-    - Štampač
+  - Smart telefon
+  - Televizor
+  - Štampač
 - **Uređajiv povezani putem Ethernet kabla**
-    - Desktop računar
-    - Switch
+  - Desktop računar
+  - Switch
 
 &nbsp;
 
@@ -17,22 +17,21 @@ WiFi ruter je mrežni uređaj koji obavlja funkcije rutera i uključuje i funkci
 
 **Neke od ključnih komponenata i funkcija WiFi rutera:**
 
-1.  **Usmeravanje:** Funkcija rutera uključuje usmeravanje saobraćaja podataka između uređaja unutar lokalne mreže i između lokalne mreže i šireg interneta. Ruteri koriste protokole poput TCP/IP za upravljanje tokom podataka.
-    
-2.  **Bežična tačka pristupa (WAP):** Funkcija bežične tačke pristupa omogućava uređajima poput pametnih telefona, laptopova i tableta da se bežično povežu sa lokalnom mrežom putem WiFi standarda (kao što su 802.11ac ili 802.11n).
-    
-3.  **Ethernet portovi:** Većina WiFi rutera ima ugrađene Ethernet portove koji omogućavaju žičane veze za uređaje poput računara, externih switcheva, IP kamera...
-    
-4.  **Mrežni prekidač (Switch):** Ruteri često imaju ugrađeni mrežni prekidač koji omogućava višestruke žičane veze uređaja putem Ethernet kablova.
-    
-5.  **Router Firewall:** Ruteri obično uključuju osnovni firewall koji pomaže u zaštiti lokalne mreže od neovlašćenog pristupa sa interneta.
-    
-6.  **DHCP server:** Funkcija DHCP servera automatski dodeljuje IP adrese uređajima unutar lokalne mreže, pojednostavljujući proces postavljanja novih uređaja na mreži.
-    
-7.  **NAT (Network Address Translation):** NAT omogućava više uređaja unutar lokalne mreže da dele jednu javnu IP adresu, što je ključno za štednju IPv4 adresa i omogućavanje komunikacije sa internetom.
-    
-8.  **Firmware i konfiguracioni interfejs:** Ruteri imaju firmware, što je u osnovi njihov operativni sistem. Korisnici mogu konfigurisati postavke rutera putem veb interfejsa, omogućavajući podešavanje sigurnosnih mera, prilagođavanje mrežnih postavki, postavlanje i menjanje lozinki i još mnogo toga.
-    
+1. **Usmeravanje:** Funkcija rutera uključuje usmeravanje saobraćaja podataka između uređaja unutar lokalne mreže i između lokalne mreže i šireg interneta. Ruteri koriste protokole poput TCP/IP za upravljanje tokom podataka.
+
+2. **Bežična tačka pristupa (WAP):** Funkcija bežične tačke pristupa omogućava uređajima poput pametnih telefona, laptopova i tableta da se bežično povežu sa lokalnom mrežom putem WiFi standarda (kao što su 802.11ac ili 802.11n).
+
+3. **Ethernet portovi:** Većina WiFi rutera ima ugrađene Ethernet portove koji omogućavaju žičane veze za uređaje poput računara, externih switcheva, IP kamera...
+
+4. **Mrežni prekidač (Switch):** Ruteri često imaju ugrađeni mrežni prekidač koji omogućava višestruke žičane veze uređaja putem Ethernet kablova.
+
+5. **Router Firewall:** Ruteri obično uključuju osnovni firewall koji pomaže u zaštiti lokalne mreže od neovlašćenog pristupa sa interneta.
+
+6. **DHCP server:** Funkcija DHCP servera automatski dodeljuje IP adrese uređajima unutar lokalne mreže, pojednostavljujući proces postavljanja novih uređaja na mreži.
+
+7. **NAT (Network Address Translation):** NAT omogućava više uređaja unutar lokalne mreže da dele jednu javnu IP adresu, što je ključno za štednju IPv4 adresa i omogućavanje komunikacije sa internetom.
+
+8. **Firmware i konfiguracioni interfejs:** Ruteri imaju firmware, što je u osnovi njihov operativni sistem. Korisnici mogu konfigurisati postavke rutera putem veb interfejsa, omogućavajući podešavanje sigurnosnih mera, prilagođavanje mrežnih postavki, postavlanje i menjanje lozinki i još mnogo toga.
 
 &nbsp;
 
@@ -58,7 +57,7 @@ IEEE Standard 802.3 za Ethernet prvi put je objavljen 1985. godine. Specifikovao
 
 **OSI Model -** Koji se često pominje u radu : Otvoreni sistem interkonekcije (OSI) model opisuje sedam slojeva koje računarski sistemi koriste za komunikaciju putem mreže. To je bio prvi standardni model za mrežne komunikacije, usvojen od svih glavnih računarskih i telekomunikacionih kompanija početkom 1980-ih. Moderni internet nije zasnovan na OSI, već na jednostavnijem TCP/IP modelu. Međutim, OSI 7-slojni model se i dalje široko koristi jer pomaže vizualizaciji i komunikaciji o tome kako mreže funkcionišu, kao i pomaže u izolaciji i rešavanju problema u mrežama \[4\].
 
- <img src="../_resources/Screenshot_1-2.png" alt="Screenshot_1.png" width="540" height="393"> *Slika 1. OSI vs TCP/IP Model \[4\].*
+ <img title="" src="images/OSI vs TCPIP.png" alt="Screenshot_1.png" width="540" height="393"> *Slika 1. OSI vs TCP/IP Model \[4\].*
 
 **TCP -** Transmisioni kontrolni protokol (TCP) je internet standard koji osigurava uspešnu razmenu podataka između uređaja putem mreže. TCP je osnovni protokol za komunikaciju za različite aplikacije, uključujući veb servere i sajtove, aplikacije za e-poštu, FTP i peer-to-peer aplikacije. TCP funkcioniše zajedno sa Internet protokolom (IP) kako bi odredio kako se podaci razmenjuju onlajn. IP je odgovoran za slanje svakog paketa do njegove destinacije, dok TCP garantuje da se bajtovi prenose u redosledu u kojem su poslati, bez grešaka ili propusta. Zajedno, ova dva protokola se nazivaju TCP/IP. \[5\]
 
