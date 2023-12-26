@@ -33,13 +33,13 @@ Napadač mora da analizira da li postoje mogućnosti prepravljanja korisničkog
 
 Prvo, napadač mora da kreira web stranicu koja animira žrtvu da izvrši akcije prevlačenja i ispuštanja. Tačnije, napadač namami žrtvu da povuče napadačeve definisane elemente na napadačevu web stranicu. Takva web stranica može da se sastoji od teksta i HTML elemenata kao što su img i h1. Osim ovog scenarija napada, napadač takođe može pokušati da pronađe ranjivost ubrizgavanja koda na pouzdanoj i redovno posjećenoj web stranici.
 
-![Botnet.png](Images/UIRedressingCode.png)
+![Botnet.png](Images/Cats.png)
 <br>
 Slika 1. Primjer stranica sa malicioznim elementima
 
 Jedan od načina za napad na žrtvu prikazan je na slici 1. Postoje tri slike sa mačićima i tri kutije koje navode neka svojstva ovih slika. Drugo, korisnik će kliknuti na sliku mačića, prevući je i ispustiti izabrani element u jedan od tri okvira. Ove kutije su postavljene ispod nevidljivog iFrame-a koji učitava administrativni interfejs. U našem napadu, žrtva odlučuje kakav je efekat ovih radnji i klikne na dugme da dobije više informacija ili žrtva bira da vidi više mačića. Svaka slika ispušta vrednost foobar u tekstualno polje korišćenjem atributa draggable.
 
-![Botnet.png](Images/Cats.png)
+![Botnet.png](Images/UIRedressingCode.png)
 <br> Slika 2. Kod za izvršetak napada
 
 Na slici 2 je prikazan kod za izvršetak napada. Koristimo CSS kod da izvršimo uspješan napad prepravljanja korisničkog interfejsa pomoću API-ja za prevlačenje i ispuštanje i iFrames-a. Prvi red sadrži većinu CSS koda koji se odnosi na div i button elemente. Postavljamo poziciju, koristimo z-indeks kao svojstvo da preklopimo iFrame sa adresiranim elementima i definišemo vrijednosti u tekstualna polja a ne u div elemente. Druga linija pokazuje kako se može napraviti slika mačića. Koristimo obrađivač događaja ondragstart sa tipom tekt/plain i vrednošću foobar. Ovo omogućava napadaču da koristi ovu vrijednost kao korisničko ime i lozinku za navigaciju kroz interfejs administracije nakon uspješnog napada. Štaviše, definišemo atribut koji se može prevući tako da ne ispuštamo ime slike ili putanju slike u polje za tekst. Samo foobar definisan od strane napadača se ispušta. Četvrti red sadrži naš element dugmeta sa pozicijom iznad dugmeta administrativnog interfejsa. Poslednje, ali ne i najmanje važno, je iFrame koji učitava web stranicu da bi kreirao daljinski pristup koristeći CSS kod, da bi je postavio pored teksta i slika mačića.
