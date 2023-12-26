@@ -8,8 +8,6 @@ U ovom dokumentu će biti pomenuta dvije varijante XSS napada:
 2.  Stored XSS
     Ako se vektor napada može trajno čuvati u web aplikaciji (primjer zlonamjerni kod unutar datoteke evidencije), imamo sačuvani XSS. Svaki put kada žrtva posjeti dio web aplikacije gde se vektor čuva, napad će se izvršava [2].
 
-## Stablo napada
-
 ## Ranjivosti
 
 XSS ranjivosti se javljaju kada unos koji dolazi u web aplikacije nije validiran ili sadržaj u pretraživaču nije pravilno izbačen pre nego što se prikaže ili taj isti sadržaj nije enkodiran.

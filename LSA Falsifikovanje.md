@@ -34,10 +34,6 @@ Kada svi ruteri imaju ažuriranu bazu podataka, svaki ruter može da koristi Dij
 <br>
 Slika 1. Tabela rutiranja
 
-## Stablo napada
-
-LINK SLIKE 2
-
 ## Ranjivosti
 
 Neke ranjivosti koje se mogu uočiti kroz stvaranje tabele rutiranja i djelovanja OSPF protokola, koje napadači uveliko iskorištavaju prilikom svojih napada jesu:
