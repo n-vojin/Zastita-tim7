@@ -30,7 +30,7 @@ međusobno povezani. Kako bi čvor otkrio svoje susjedne rutere, pomoću OSPF pr
  
 Kada svi ruteri imaju ažuriranu bazu podataka, svaki ruter može da koristi Dijkstrin algoritam [5] za izračunavanje stabla najkraćeg puta sa drugim ruterima, time formira potpunu sliku rutiranja u mreži, koja se drugačije naziva tabela rutiranja prikazane na slici 1.
 
-LINK SLIKE 
+![Botnet.png](Images/The routing table generation.png)
 
 ## Stablo napada
 LINK SLIKE 2
