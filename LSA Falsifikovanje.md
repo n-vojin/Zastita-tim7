@@ -31,6 +31,7 @@ Kada se susjedni ruter pronađe preko protokola, pošiljalac prolazi kroz „pro
 Kada svi ruteri imaju ažuriranu bazu podataka, svaki ruter može da koristi Dijkstrin algoritam [5] za izračunavanje stabla najkraćeg puta sa drugim ruterima, time formira potpunu sliku rutiranja u mreži, koja se drugačije naziva tabela rutiranja prikazane na slici 1.
 
 ![Botnet.png](Images/routing_table.png)
+Slika 1. Tabela rutiranja
 
 ## Stablo napada
 
@@ -50,16 +51,19 @@ Neke ranjivosti koje se mogu uočiti kroz stvaranje tabele rutiranja i djelovanj
 Gateway je uređaj za rutiranje koji propušta saobraćaj između različitih podmreža i mreža, pa je samim tim doprinos ruteru i OSPF protokolu za dinamičko otkrivanje susjeda pomoću zdravo paketa. Kada se napadač poveže sa mrežnim prolazom (gateway) u istoj podmreži, on prvo hvata zdravo paket i time dobija parametre. Pomoću tih parametara napadač pravi svoj zdravo paket. Gateway prima taj paket, smatrajući da je napadačev ruter standardni susjedni ruter i njemu potom šalje poruku opisa baze podataka (DBD), time razmjenjuju svoje liste veza sa ostalim ruterima (LSA). Napadač ovim dobija najkraće puteve do ostalih članova mreže, te svojim LSA-om ubacuje maliciozni kod. Gateway primivši taj lažni LSA od napadača, preplavljuje tim čitavu mrežu. Ostali ruteri ažuriraju svoje LSA-ove i time se i oni zarazuju lažnim rutama. Napad je slikovito prikazan na slici 3.
 
 ![Botnet.png](Images/adjacency_spoofig_attack.png)
+Slika 3. Adjacency Spoofing napad
 
 ## Single Path Injection Attack
 
 Single Path Injection napad želi da ubaci lažni LSA preko srednjeg „odskočnog rutera“ do određenog „zagađenog rutera“. Napadač može poslati lažni LSA sa hosta na zagađen ruter R8 preko rutera odskočne daske R6. Izvorna IP adresa u ovom lažnom LSA je postavljena na adresu f1/0, a vrijednost ID-a je postavljena na ID R6, prikazanog na slici 4. Na ovaj način, zagađeni ruter R8 vjeruje da je ovaj lažni LSA došao iz rutera R6. R8 je prvi ruter koji čuva lažni LSA u svojoj bazi podataka o stanju veze i šalje potvrdu stanja veze svim ostalim ruterima u OSPF mrežama.
 
 ![Botnet.png](Images/Network_topology_single_path_injection_attack.png)
+Slika 4. Topologija mreže
 
 Slika 5 prikazuje tri situacije slanja paketa ažuriranja stanja veze sa LSA. Prve dvije situacije prikazuju normalne interaktivne procese u fazi uspostavljanja susjedne veze i fazi LSA prenosa. Posljednji je interaktivni proces između napadača i zagađenog rutera prilikom slanja lažnog LSA.
 
 ![Botnet.png](Images/interactivities_link_state_update_process.png)
+Slika 4. Slanje i ažuriranja stanja veze sa LSA
 
 U normalnoj fazi, ruter šalje LSA drugim ruterima, potom ubacuje LSA u svoju listu retransmisije stanja lokalne veze (lista kreirana za prenos LSA-ova), a zatim čeka potvrdu stanja veze u datom vremenskom intervalu. Ako nijedna potvrda stanja veze nije poslata pre isteka vremena, ruter ponovo emituje LSA. U suprotnom, ruter potvrđuje LSA i briše LSA sa liste retransmisije stanja lokalne veze.
 
@@ -84,9 +88,9 @@ Moguće mjera za ublažavanje pomenutih ranjivosti:
 
 ## Reference
 
-[1] [Yubo SONG, Shang GAO, Aiqun HU, Bin XIAO. Novel Attacks in OSPF Networks to Poison Routing Table](https://www4.comp.polyu.edu.hk/~shanggao/publications/Novel_Attacks_in_OSPF_Networks_to_Poison_Routing_Table.pdf)
-[2][Bahaa Al-Musawi, Philip Branch, Mohammed Falih Hassan, Shiva Raj Pokhrel. Identifying OSPF LSA falsification attacks through non-linear analysis](https://www.sciencedirect.com/science/article/abs/pii/S1389128619310333#preview-section-references)
-[3][Brad Woodberg, Ralph Bonnell. Configuring Juniper Networks NetScreen & SSG Firewalls, Chapter 7. Routing](https://www.sciencedirect.com/topics/computer-science/link-state-advertisement#:~:text=Link%20State%20Advertisements%20%28LSAs%29%20are,BDR%20routers%20to%20announce%20changes.)
-[4][Katie Terrell Hanna. Flooding (network)](https://www.techtarget.com/searchnetworking/definition/flooding#:~:text=In%20a%20computer%20network,%20flooding,node%20in%20a%20large%20network.)
-[5] [M. Noto, H.Sato A method for the shortest path search by extended Dijkstra algorithm ](https://ieeexplore.ieee.org/abstract/document/886462)
-[6][Gabi Nakibly, Adi Sosnovich, Eitan Menahem, Ariel Waizel, Yuval Elovici. OSPF Vulnerability to Persistent Poisoning Attacks: A Systematic Analysis](https://csaws.cs.technion.ac.il/~gnakibly/papers/ACSAC14.pdf)
+\[1\] [Yubo SONG, Shang GAO, Aiqun HU, Bin XIAO. Novel Attacks in OSPF Networks to Poison Routing Table](https://www4.comp.polyu.edu.hk/~shanggao/publications/Novel_Attacks_in_OSPF_Networks_to_Poison_Routing_Table.pdf)
+\[2\][Bahaa Al-Musawi, Philip Branch, Mohammed Falih Hassan, Shiva Raj Pokhrel. Identifying OSPF LSA falsification attacks through non-linear analysis](https://www.sciencedirect.com/science/article/abs/pii/S1389128619310333#preview-section-references)
+\[3\][Brad Woodberg, Ralph Bonnell. Configuring Juniper Networks NetScreen & SSG Firewalls, Chapter 7. Routing](https://www.sciencedirect.com/topics/computer-science/link-state-advertisement#:~:text=Link%20State%20Advertisements%20%28LSAs%29%20are,BDR%20routers%20to%20announce%20changes.)
+\[4\][Katie Terrell Hanna. Flooding (network)](https://www.techtarget.com/searchnetworking/definition/flooding#:~:text=In%20a%20computer%20network,%20flooding,node%20in%20a%20large%20network.)
+\[5\] [M. Noto, H.Sato A method for the shortest path search by extended Dijkstra algorithm ](https://ieeexplore.ieee.org/abstract/document/886462)
+\[6\][Gabi Nakibly, Adi Sosnovich, Eitan Menahem, Ariel Waizel, Yuval Elovici. OSPF Vulnerability to Persistent Poisoning Attacks: A Systematic Analysis](https://csaws.cs.technion.ac.il/~gnakibly/papers/ACSAC14.pdf)
