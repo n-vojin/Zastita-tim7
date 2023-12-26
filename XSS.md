@@ -33,12 +33,12 @@ Ovaj napad oslanja se na činjenicu da postoje prijemnici ulaza, koji nisu pravi
 
 ## Reference
 
-/[1/] [Kirsten S. Cross Site Scripting (XSS)](https://owasp.org/www-community/attacks/xss/)
+[1] [Kirsten S. Cross Site Scripting (XSS)](https://owasp.org/www-community/attacks/xss/)
 
-/[2/] [Marcus Niemietz, Jorg Schwenk. Owning Your Home Network: Router Security Revisited](https://arxiv.org/pdf/1506.04112.pdf)
+[2] [Marcus Niemietz, Jorg Schwenk. Owning Your Home Network: Router Security Revisited](https://arxiv.org/pdf/1506.04112.pdf)
 
-/[3/] [Belkin router documentation](https://www.belkin.com/my/support-article?articleNum=7994)
+[3] [Belkin router documentation](https://www.belkin.com/my/support-article?articleNum=7994)
 
-/[4/] [Fingerprinting](fingerprinting)
+[4] [Fingerprinting](fingerprinting)
 
-/[5/] [Portswigger](https://portswigger.net/web-security/cross-site-scripting)
+[5] [Portswigger](https://portswigger.net/web-security/cross-site-scripting)

@@ -10,8 +10,6 @@ Studija počinje istraživanjem osnovnih operacija WiFi mreža, obazirući se na
 
 Međutim, čak i uz snažne enkripcije, WiFi mreže i ruteri ostaju podložni raznim ranjivostima. Rad identifikuje uobičajene slabosti koje zlonamerni pojedinci mogu iskoristiti, uključujući zastareli softver, podrazumevane pristupne podatke i netačne konfiguracije rutera itd. Adresiranje ovih ranjivosti ključno je za sprečavanje neovlašćenog pristupa i potencijalnih rizika po bezbednost mreže.
 
-
-
 ### Opis sistema
 
 **Funkcionalnosti koje ruter pokriva:**
@@ -29,8 +27,6 @@ Međutim, čak i uz snažne enkripcije, WiFi mreže i ruteri ostaju podložni ra
 6. Ruteri omogućavaju stvaranje podmreža, dijele veću mrežu na manje segmente. Ova segmentacija poboljšava performanse mreže, bezbednost i upravljanje.
 
 Samim tim se nadovezuje i sam razlog napada na ruter kao jednog od najvažnijih uređaja na mreži sa širokom pokrivenošću je ruter. Ruteri mogu da čuvaju identitet saobraćaja podataka na osnovu tabela dostupnih preko rutera. Brzi napredak tehnologije rutera dokazuje da su ruteri najpotrebniji uređaji, posebno za internet provajdere u izgradnji mreže i njenoj bezbednosti. Glavni cilj napadača pre ulaska u glavni sistem ili centar podataka je da isključi performanse rutera. \[1\]
-
-
 
 **Pri istraživanju mogućnosti napada, mogu se izdvojiti dvije vrste:**
 
@@ -86,7 +82,7 @@ Otisak prsta ([Fingerprinting](https://github.com/n-vojin/Zastita-tim7/blob/main
 
 ###### 5.Tabela za rutiranje (eng. Routing table)
 
-Tabela rutiranja predstavlja podatke pohranjene u RAM memoriji koji govore ruteru kako proslijediti primljeni paket susjednoj ili udaljenoj mreži. Trovanje tabela rutiranja se dešava kada dođe do drastične zlonamjerne promjene u rutini tabela rutiranja. Ovi agresivni napadi se postižu uređivanjem paketa informacija koji kruže kroz tabelu rutiranja. Trovanje rutiranjem može prouzrokovati izuzetnu štetu mrežama i serverima kao rezultat dodavanja netačnih podataka u tabelu rutiranja. Primjer napada koji uključuje tabelu rutiranja i samo rutiranje jeste [LSA Falsifikovanje](https://github.com/n-vojin/Zastita-tim7/blob/main/LSA%20Falsifikovanje.md)
+Tabela rutiranja predstavlja podatke pohranjene u RAM memoriji koji govore ruteru kako proslijediti primljeni paket susjednoj ili udaljenoj mreži. Trovanje tabela rutiranja se dešava kada dođe do drastične zlonamjerne promjene u rutini tabela rutiranja. Ovi agresivni napadi se postižu uređivanjem paketa informacija koji kruže kroz tabelu rutiranja. Trovanje rutiranjem može prouzrokovati izuzetnu štetu mrežama i serverima kao rezultat dodavanja netačnih podataka u tabelu rutiranja. Primjer napada koji uključuje tabelu rutiranja i samo rutiranje jeste [LSA Falsifikovanje](https://github.com/n-vojin/Zastita-tim7/blob/main/LSA%20Falsifikovanje.md).
 
 Načini odbrane:
 
@@ -99,10 +95,6 @@ Korišćenje osnovne HTTP autentifikacije
 Koristiti dobru enkripciju
 
 Filter zaštitnog zida i ruteri zaštitnog zida su efikasni u terinada terranga DoSpada rutermikrotik. Funkcije filtera zaštitnog zida menjaju paketne podatke kao na ruteru, dok funkcije rutera zaštitnog zida za IP blokove blokiraju paketne podatke koji se nalaze na ruteru. Da biste sprečili napade, morate usmeriti ruter pomoću resetovanja rutera sa hardverskim zaštitnim zidom. \[5\]
-
-
-
-
 
 ### Reference
 
