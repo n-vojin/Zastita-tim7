@@ -4,7 +4,7 @@ Kao prvo šta predstavlja DoS napad?
 
 Napad uskraćivanja usluge (DoS) predstavlja pokušaj da se usluga učini nedostupnom; ta usluga može biti veb ili mejl server, uređaj za rutiranje, server sistema za upravljanje domenskim imenima (DNS), ili neki drugi tip servera. Napadač može efikasno onemogućiti uslugu konzumiranjem resursa ciljnog sistema, kao što su propusnost ili procesorski resursi. Pošto računari koji pružaju ovu uslugu mogu imati visoke performanse, napadaču je potrebno da kontroliše veliki skup računarskih resursa, procesorske moći i propusnosti. Ovo se može prevazići korišćenjem distribuiranog računanja i botneta. Kontrolišući stotine hiljada botova, propusnost može biti veoma velika, omogućavajući botnetu da konzumira većinu računarskih resursa usluge, čime je čini nedostupnom. \[1\]
 
-![Botnet.png](images/Botnet.png)
+![Botnet.png](Images/Botnet.png)
 
 Botnet se može koristiti u razne zlonamerne svrhe, uključujući i DDoS, koji je zapravo distribuirani DoS napad.
 
@@ -39,7 +39,7 @@ Niskofrekventni napadi uskraćivanja usluge putem TCP-a predstavljaju novu vrstu
 
 • Filter se koristi kako bi se blokirali tokovi koji su identifikovani kao zlonamerni od strane modula objekta.
 
-<img title="" src="images/Low rate DoS Detection sistem on enge router.png" alt="Low rate DoS Detection sistem on enge router.png" width="470" height="273"><img title="" src="images/Architercture of the low rate DoS sistem.png" alt="Architercture of the low rate DoS sistem.png" width="313" height="277">
+<img title="" src="Images/Low rate DoS Detection sistem on enge router.png" alt="Low rate DoS Detection sistem on enge router.png" width="470" height="273"><img title="" src="Images/Architercture of the low rate DoS sistem.png" alt="Architercture of the low rate DoS sistem.png" width="313" height="277">
 
 Predloženi sistem za odbranu se postavlja na edge router mreže koja treba da se zaštiti.
 
