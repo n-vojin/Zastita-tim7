@@ -36,7 +36,7 @@ Samim tim se nadovezuje i sam razlog napada na ruter kao jednog od najvažnijih 
 
 1. Napadi direktno na ruter
 
-2. [Napadi na rutiranje](https://github.com/n-vojin/Zastita-tim7/blob/main/LSA%20Falsifikovanje.md)
+2. Napadi na rutiranje
 
 &nbsp;
 
@@ -86,7 +86,7 @@ Otisak prsta ([Fingerprinting](https://github.com/n-vojin/Zastita-tim7/blob/main
 
 ###### 5.Tabela za rutiranje (eng. Routing table)
 
-Tabela rutiranja predstavlja podatke pohranjene u RAM memoriji koji govore ruteru kako proslijediti primljeni paket susjednoj ili udaljenoj mreži. Trovanje tabela rutiranja se dešava kada dođe do drastične zlonamjerne promjene u rutini tabela rutiranja. Ovi agresivni napadi se postižu uređivanjem paketa informacija koji kruže kroz tabelu rutiranja. Trovanje rutiranjem može prouzrokovati izuzetnu štetu mrežama i serverima kao rezultat dodavanja netačnih podataka u tabelu rutiranja.
+Tabela rutiranja predstavlja podatke pohranjene u RAM memoriji koji govore ruteru kako proslijediti primljeni paket susjednoj ili udaljenoj mreži. Trovanje tabela rutiranja se dešava kada dođe do drastične zlonamjerne promjene u rutini tabela rutiranja. Ovi agresivni napadi se postižu uređivanjem paketa informacija koji kruže kroz tabelu rutiranja. Trovanje rutiranjem može prouzrokovati izuzetnu štetu mrežama i serverima kao rezultat dodavanja netačnih podataka u tabelu rutiranja. Primjer napada koji uključuje tabelu rutiranja i samo rutiranje jeste [LSA Falsifikovanje](https://github.com/n-vojin/Zastita-tim7/blob/main/LSA%20Falsifikovanje.md)
 
 Načini odbrane:
 
