@@ -55,6 +55,8 @@ Transmission Control Protocol (TCP) je standard za komunikaciju koji omogućava 
 
 &nbsp;
 
+## Reference
+
 &nbsp;
 
 \[1\] https://www.diva-portal.org/smash/get/diva2:508254/FULLTEXT01.pdf

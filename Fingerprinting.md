@@ -38,6 +38,10 @@ Konačno, kao poslednje sredstvo, operater može odlučiti da potpuno isključi 
 
 &nbsp;
 
+
+
+## Reference
+
 \[1\] [Network Fingerprinting: Routers under Attack - Emeline Marechal Montefiore, Benoit Donnet](https://orbi.uliege.be/bitstream/2268/248733/1/paper.pdf)
 
 \[2\] [Third Time's Not a Charm: Exploiting SNMPv3 for Router Fingerprinting](https://dl.acm.org/doi/pdf/10.1145/3487552.3487848)
