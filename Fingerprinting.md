@@ -2,7 +2,7 @@
 
 Fingerprinting rutera se odnosi na tehniku identifikacije i prikupljanja informacija o ruteru na osnovu njegovih jedinstvenih karakteristika i ponašanja. Iako je glavni cilj fingerprintinga rutera često poboljšanje bezbednosti mreže, postoji i rizik da napadač dođe do tih informacija i da njih iskoristi. Ako napadač identifikuje marke rutera i cilja određene proizvođače sa poznatim sigurnosnim propustima, može doći do zloupotrebe, pogotovo ako je reč o verzijama firmware-a koji imaju poznate propuste koji su lako iskoristivi.
 
-![Images/Router signature.png](Images/Router%20signature.png)
+<img title="" src="Images/Router signature.png" alt="Images/Router signature.png">
 
 Tabela 1 sumira glavne potpise rutera, sa povezanim brendovima rutera i operativnim sistemima rutera.
 
