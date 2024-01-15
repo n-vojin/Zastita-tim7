@@ -1,6 +1,14 @@
 # DoS
 
-Kao prvo šta predstavlja DoS napad?
+### Pretnja
+
+Kako je ruter zadužen za protok svih informacija koje se razmenjuju između LAN-a i WAN-a, on predstavlja atraktivnu metu za napade DoS vrste. Pogotovo zato što se lako može "prepalaviti" zahtevima. Potencijalni napadači mogu da to iskoriste i onemgouće ili znatno uspore protoke podataka kod krajnjih korisnika, kod kućnih mreža to možda ne bi prouzrokovalo neku veliku štetu, ali u mrežama koje koriste preduzeća, koja zavise od protoka velike količine informacija, bi se itekako mogla napraviti velika šteta. Napadač bi znatno usporio ili čak onemogućio preduzeću da pruža svoje usluge, što bi dovelo do velikih gubitaka.
+
+Potencijalni napadači su: konkurenta firma, zlonamerni ili nezadovoljni korisnici, kojima je u cilju da uspore, otežaju ili onemoguće rad mreže, ili ucenjivači koji bi tražili neku naknadu kako bi prestali sa napadom DoS vrste.
+
+
+
+### Šta predstavlja DoS napad?
 
 Napad uskraćivanja usluge (DoS) predstavlja pokušaj da se usluga učini nedostupnom; ta usluga može biti veb ili mejl server, uređaj za rutiranje, server sistema za upravljanje domenskim imenima (DNS), ili neki drugi tip servera. Napadač može efikasno onemogućiti uslugu konzumiranjem resursa ciljnog sistema, kao što su propusnost ili procesorski resursi. Pošto računari koji pružaju ovu uslugu mogu imati visoke performanse, napadaču je potrebno da kontroliše veliki skup računarskih resursa, procesorske moći i propusnosti. Ovo se može prevazići korišćenjem distribuiranog računanja i botneta. Kontrolišući stotine hiljada botova, propusnost može biti veoma velika, omogućavajući botnetu da konzumira većinu računarskih resursa usluge, čime je čini nedostupnom. \[1\]
 
@@ -11,12 +19,6 @@ Botnet se može koristiti u razne zlonamerne svrhe, uključujući i DDoS, koji j
 ### Ograničeni resursi i nedostatak zaštitnog softvera.
 
 Ruter je fizički mali uređaj s ograničenim resursima. To otežava dodavanje softvera za zaštitu poput antivirusa ili antimalvera. Ograničenja u resursima čine uređaj ranjivim na napade uskraćivanja usluge (DoS ili DDoS), jer se resursi lako mogu "popuniti" zahtevima. Istovremeno, ruter obično već podržava mnoge usluge, ostavljajući malo neiskorišćenih resursa i čineći instalaciju sistema za otkrivanje upada (Intrusion Detection Systems) vrlo teškim.
-
-### Razlozi napada
-
-Kako je ruter zadužen za protok svih informacija koje se razmenjuju između LAN-a i WAN-a, on predstavlja atraktivnu metu za napade DoS vrste. Pogotovo zato što se lako može "prepalaviti" zahtevima. Potencijalni napadači mogu da to iskoriste i onemgouće ili znatno uspore protoke podataka kod krajnjih korisnika, kod kućnih mreža to možda ne bi prouzrokovalo neku veliku štetu, ali u mrežama koje koriste preduzeća, koja zavise od protoka velike količine informacija, bi se itekako mogla napraviti velika šteta. Napadač bi znatno usporio ili čak onemogućio preduzeću da pruža svoje usluge, što bi dovelo do velikih novčanih gubitaka ili troškova.
-
-Potencijalni napadači su: konkurenta firma, zlonamerni ili nezadovoljni korisnici, kojima je u cilju da uspore, otežaju ili onemoguće rad mreže, ili ucenjivači koji bi tražili neku naknadu kako bi prestali sa napadom DoS vrste.
 
 ### Mitigacije
 
@@ -35,7 +37,7 @@ Niskofrekventni napadi uskraćivanja usluge putem TCP-a predstavljaju novu vrstu
 
 • Modul za klasifikaciju toka klasifikuje pakete na osnovu identifikatora toka putem kombinacije IP adrese izvora, IP port-a izvora, IP adrese odredišta i IP port-a odredišta. Informacije o toku se dobijaju iz ovih paketa, i paketi se prosleđuju uobičajenim rutiranjem, što rezultira odsustvom dodatnog kašnjenja osim kašnjenja pretrage.
 
-• Modul objekta sastoji se od različitih objekata za svaki tok koji se prati. Detaljno objašnjenje dato je u sledećem pododeljku. Tok se prati dok se ne smatra normalnim.
+• Modul objekta sastoji se od različitih objekata za svaki tok koji se prati. 
 
 • Filter se koristi kako bi se blokirali tokovi koji su identifikovani kao zlonamerni od strane modula objekta.
 

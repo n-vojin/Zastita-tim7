@@ -12,7 +12,7 @@ On se deli na tri slučaja:
 
 ## Napadač ima pristup ethernet kablu
 
-Postoje različite tehnike koje hakeri mogu koristiti kako bi ugrozili Ethernet priključke ili mreže. Evo nekoliko primera:
+Postoje različite tehnike koje maliciozni pojedinci mogu koristiti kako bi ugrozili Ethernet priključke ili mreže. Evo nekoliko primera:
 
 1. **Fizički pristup:** Ako napadač dobije fizički pristup Ethernet priključku, može direktno povezati svoj uređaj sa mrežom, zaobilazeći bilo koje bezbednosne mere koje su na snazi. Ovo se može postići ubadanjem uređaja u neosiguran ili nepažljivo nadgledan priključak.
 
@@ -50,13 +50,13 @@ Kod testiranih rutera se mogu uočiti defaultni kredencijali koji se ne razlikuj
 
 Menjaje defaultnih kredencijala za logovanje na aplikativni softver od rutera.
 
-Takođe stavljanje WiFi lozinke pute WPA2 ili nekih drugih ugrađenih protokola za zaštitu.
+Takođe stavljanje WiFi lozinke putem WPA2 ili nekih drugih ugrađenih protokola za zaštitu.
 
 ## Napadač fizički ima pristup ruteru
 
 Kada napadač ima fizički pristup ruteru osim što ima mogućnost da uradi sve gore navedeno, može i da instalira uređaje za prisluškivanje saobraćaja i da time postande Man-in-the-middle.
 
-Iako je WiFi mreža, i aplikativni softver zaštićen ne defaultim šiframa, napadač može da iskoristi dugme za resetovanje rutera, i time dobjia sve defaultne kredencijale i informacije, koje su i u većini slučajeva prikazane direktno na ruteru.
+Iako je WiFi mreža, i aplikativni softver predhodno zaštićen ne defaultim šiframa, napadač može da iskoristi dugme za resetovanje rutera, i time dobjia sve defaultne kredencijale i informacije, koje su i u većini slučajeva prikazane direktno na ruteru.
 
 ![Back of router.png](Images/Back%20of%20router.png)
 
@@ -75,5 +75,3 @@ Bolja kontrola pristupa.
 \[1\] https://www.quora.com/Is-it-possible-to-be-hacked-through-an-Ethernet-cable-like-being-hacked-with-a-USB
 
 \[2\] [Owning Your Home Network: Router Security Revisited - Marcus Niemietz, Jorg Schwenk](https://arxiv.org/ftp/arxiv/papers/1506/1506.04112.pdf)
-
-
