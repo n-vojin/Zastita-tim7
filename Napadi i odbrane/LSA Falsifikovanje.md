@@ -33,7 +33,7 @@ Kada se susjedni ruter pronađe preko protokola, pošiljalac prolazi kroz „pro
 
 Kada svi ruteri imaju ažuriranu bazu podataka, svaki ruter može da koristi Dijkstrin algoritam [5] za izračunavanje stabla najkraćeg puta sa drugim ruterima, time formira potpunu sliku rutiranja u mreži, koja se drugačije naziva tabela rutiranja prikazane na slici 1.
 
-![Botnet.png](Images/routing_table.png)
+![Botnet.png](./../Images/routing_table.png)
 <br>
 Slika 1. Tabela rutiranja
 
