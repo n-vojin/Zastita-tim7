@@ -1,4 +1,4 @@
-### Evil twin pretnja
+### Opis
 
 <img title="" src="./../Images/WiFi granica poverenja.png" alt="loading-ag-205" style="zoom:67%;" data-align="center">
 
@@ -10,8 +10,50 @@ U današnje vreme bežični internet  je najrasprostranjeniji izvor pristupa in
 
 
 
+### Evil Twin
+
+U WiFi mreži, tačka pristupa (AP) periodično emituje svoje **beacon frame**-ove kako bi pokazala svoje prisustvo u bežičnom okruženju. Klijent otkriva tačke pristupa slušajući njih kako se oglašavaju. Oni sami po sebi ne mogu biti šifrovani. U suprotnom, klijent ne može da se poveže s tačkom pristupa. Kao rezultat toga, ova ranjivost pruža odličnu priliku napadačima da prodiru u WiFi mrežu i izvode napade poput zlonamernog blizanca.
+
+**Zlonamerni blizanac** (evil twin) je zlonamerna replika tačke pristupa (LAP) pokrenuta od strane napadača, koja oponaša identitet LAP-a u mreži, kao što je prikazano na slici ispod. Napadač beacon frejmove LAP-a i lako izvlači SSID i BSSID, jer oniokviri nisu šifrovani. Zatim napadač kreira sličnu tačku pristupa falsifikujući BSSID i SSID LAP-a, kao što je prikazano na slici ispod. Napad postaje uspešan jer klijenti koji slušaju beacon frejmove ne mogu razlikovati identitet LAP-a i zlonamernog blizanca, pretpostavljajući da su oba legitimna AP-a [1].
+
+**Beacon frame** je vrsta upravljačkog okvira u IEEE 802.11 WLAN (bežičnim lokalnim mrežama). Sadrži informacije o mreži. Beacon okviri se periodično šalju; služe da obaveste o prisustvu bežične lokalne mreže i pruže vremenski signal za sinhronizaciju komunikacije sa uređajima koji koriste mrežu [2].
+
+<img title="EvilTwin lansiran od strane napadača" src="file:///F:/skola/FTN/ZASTITA/GIT PROJEKAT/Zastita-tim7/Images/EvilTwin lansiran.png" alt="EvilTwin lansiran" data-align="left">
+
+*Slika 2. EvilTwin lansiran od strane napadača*
+
+![Imitiranje AP](F:\skola\FTN\ZASTITA\GIT%20PROJEKAT\Zastita-tim7\Images\Imitiranje%20AP.png)
+
+*Slika 3. EvilTwin imitira legitimnu tačku pristupa(AP)*
+
+### Napad
+
+Postoje dve metode Evil Twin napada: 
+
+- **Pasivni Evil Twin napad:** napadač pokreće zlonamernog blizanca i povećava jačinu signala hotspot-a zlonamernog blizanca. Na taj način, svaki put kada se bilo koji klijent pokuša povezati, povezuje se sa zlonamernim blizancem, prikazano na slici 4.
+
+- **Aktivni Evil Twin napad:** Zlonamerni blizanac cilja klijente koji su već povezani sa legitimnom tačkom pristupa (LAP) izvođenjem napada deautentifikacije preko LAP-a. Zbog toga, klijent se odjavljuje iz veze s LAP-om i povezuje se sa zlonamernim blizancem, kako je prikazano na slici 5.
+
+![PasivniEvilTwin](F:\skola\FTN\ZASTITA\GIT%20PROJEKAT\Zastita-tim7\Images\PasivniEvilTwin.png)
+
+*Slika 4. EvilTwin čeka žrtve (pasivni napad)*
+
+![AktivniEvilTwin](F:\skola\FTN\ZASTITA\GIT%20PROJEKAT\Zastita-tim7\Images\AktivniEvilTwin.png)
+
+*Slika 5. EvilTwin aktivno odjavljuje korisnike (aktivni napad)*
+
+Na javnim WiFi mrežama, neki od dobro poznatih napada uključuju pasivno slušanje i phishing. Zlonamerni blizanac uvodi znatno ozbiljnije sigurnosne pretnje u odnosu na pasivno praćenje kanala jer: 1) zlonamerni blizanac je sposoban preusmeriti komunikaciju WiFi klijenata; 2) sposoban je izazvati zasićenje kanala; 3) može odlagati komunikaciju s klijentom. Phishing napadi na WiFi mrežama uglavnom su povezani sa MAC slojem. Napadi ribarenja koje izvode WiFi klijenti lako se mogu uočiti. Stoga, ozbiljniji napadi ribarenja u WiFi mrežama zahtevaju iskorišćavanje tačaka pristupa. Napadač može iskoristiti tačke pristupa da izvede ribarenje na sledeće načine: 1) kompromitovanjem LAP-a ili 2) pokretanjem zlonamernog blizanca. Kompromitovanje tačke pristupa u WiFi mrežama je teško, ali pokretanje zlonamernog blizanca je jednostavno. Stoga je napad zlonamernog blizanca lako izvesti, unoseći ozbiljne pretnje, i teško ga je detektovati.
+
+### Mitigacije
+
+Predložen EvilScout sistem.
+
 
 
 
 
 \[1\] [EvilScout: Detection and Mitigation of Evil Twin Attack in SDN Enabled WiFi Pragati Shrivastava , Mohd Saalim Jamal , and Kotaro Kataoka](https://sci-hub.se/10.1109/tnsm.2020.2972774)
+
+[2] [802.11 Mgmt : Beacon Frame | mrn-cciew](https://mrncciew.com/2014/10/08/802-11-mgmt-beacon-frame/)
+
+
