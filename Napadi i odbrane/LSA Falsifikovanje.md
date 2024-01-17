@@ -12,6 +12,14 @@ U daljem nastavku teksta obradiće se LSA falsifikovanje kao najčešći napad n
 1.  Adjacency spoofing attack
 2.  Single path injection attack
 
+## Granice povjerenja
+
+![Botnet.png](./../Images/tabela_rutiranja_granica_povjerenja.jpeg)
+<br>
+
+![Botnet.png](./../Images/Ruteri_granice_povjerenja.jpeg)
+<br>
+
 ## OSPF protokol
 
 Open Shortest Path First (OSPF) je jedan od najčešće korišćenih protokola za rutiranje. Predstavnik je protokol za rutiranje stanja veza, što znači da ruteri razmjenjuju informacije o topologiji sa svojim najbližim susjedima. Glavna odgovornost OSPF protokola za rutiranje je da omogući svim ruterima unutar autonomnog sistema mreže da naprave svoje tabele rutiranja i ažuriraju ih kada dođe do promjene topologije pomenutog sistema [2].
@@ -36,7 +44,6 @@ Kada svi ruteri imaju ažuriranu bazu podataka, svaki ruter može da koristi Dij
 ![Botnet.png](./../Images/routing_table.png)
 <br>
 
-
 ## Ranjivosti
 
 Neke ranjivosti koje se mogu uočiti kroz stvaranje tabele rutiranja i djelovanja OSPF protokola, koje napadači uveliko iskorištavaju prilikom svojih napada jesu:
@@ -45,6 +52,11 @@ Neke ranjivosti koje se mogu uočiti kroz stvaranje tabele rutiranja i djelovanj
 2.  Ruter ne provjerava jednakost primljenog polja ID stanja veze i polja rutera za oglašavanje.
 3.  . Kada se primi lažni LSA sa poljem Advertising Router koji je jednak ID trenutnog rutera moglo bi se zaobići neki bezbjednosti mehanizmi koje OSPF nalaže
 4.  Tokom faze izračunavanja tabele rutiranja, ruterovi LSA-ovi se traže u bazi podataka koristeći samo polje ID stanja veze [6].
+
+## Stablo napada
+
+![Botnet.png](./../Images/LSA_Falsifikovanje_Stablo_Napada.png)
+<br>
 
 ## Opisani slučajevi napada
 
@@ -102,7 +114,7 @@ Moguće mjera za ublažavanje pomenutih ranjivosti:
 
 1. Provjera jednakosti polje identifikatora stanja veze rutera koji je primio LSA i polja identifikatora ruter koji se zaista trebao oglasiti. Ukoliko nisu ova dva polja ista, dobijeni LSA treba odbaciti.
 2. Fight-back mehanizam će se pokrenuti ako se primi lažni LSA koji ima ID trenutnog rutera u polju oglašavačkog rutera ili u polju ID stanja veze.
-3. Tokom faze izračunavanja tabele rutiranja, ruterovi LSO-ovi se traže koristeći njihov puni identifikator [6].
+3. Tokom faze izračunavanja tabele rutiranja, ruteri LSO-ovi se traže koristeći njihov puni identifikator [6].
 
 ## Reference
 

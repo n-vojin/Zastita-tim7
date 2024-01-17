@@ -5,6 +5,16 @@ UI Redressing je tehnika napada za modifikovanje ponašanja i, opciono, izgleda 
 - Classic Clickjacking
 - Tabjacking
 
+## Granice povjerenja
+
+![Botnet.png](./../Images/Ruter_interfejs_granice_povjerenja.jpeg)
+<br>
+
+## Stablo napada
+
+![Botnet.png](./../Images/UIRedressing_stablo_napada.png)
+<br>
+
 **Classic Clickjacking**
 Kod Clickjacking napada, napadač ubacuje svoju stranicu ili element unutar IFrame-a. IFrame je element koji učitava strukturu HTML dokumenta unutar web aplikacije [2] . Tim sadržajem, napadač namamljuje korisnike da kliknu na određen element.
 
@@ -62,7 +72,7 @@ Neki od načina prevencije ovog napada jesu:
 1. **Client-side defenses** mehanizam koji sprečava da se web lokacija učita u IFrame.
 2. **Using the X-Frame-Options header** bolji pristup za sprečavanje napada klikova je da se zamoli pregledač da blokira svaki pokušaj učitavanja web lokacije unutar IFrame-a. To se može učiniti slanjem HTTP zaglavlja Ks-Frame-Options.
 3. **Using CSP** Glavni pretraživači podržavaju zaglavlje Ks-Frame-Options. Međutim, nikada nije standardizovan, tako da možda postoje pretraživači koji ga ne podržavaju. Alternativni standardni pristup za sprečavanje napada klikova je korišćenje posebnih direktiva politike bezbednosti sadržaja (CSP).
-4. **Using cookie's sameSite origin** Ako je web aplikacija podložna klikovima zbog kolačića sesije, može se zaštititi korišćenjem istog svojstva kolačića sameSite. U ovom slučaju, odbrana se ne zasniva na kršenju ponašanja IFrame-a, već na sprečavanju da sesija bude važeća kada je web lokacija unutar IFrame-a [5].
+4. **Using cookie's same site origin** Ako je web aplikacija podložna klikovima zbog kolačića sesije, može se zaštititi korišćenjem istog svojstva kolačića sameSite. U ovom slučaju, odbrana se ne zasniva na kršenju ponašanja IFrame-a, već na sprečavanju da sesija bude važeća kada je web lokacija unutar IFrame-a [5].
 
 ## Reference
 

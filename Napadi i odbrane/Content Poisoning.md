@@ -1,6 +1,11 @@
-# Trovanje sadržaja
+# Trovanje sadržajem
 
 Postojeća Internet arhitektura se oslanja na IP adrese za usmjeravanje prenosa paketa. Ova arhitektura postepeno usporava i otežava sam protok saobraća jer mrežne usluge i aplikacije danas postaju mobilne i fokusirane na podatke. Kao prijedlog za poboljšanje Internet arhitekture zasnovane na IP-u, uvodi se Named Data Networking (NDN). NDN je novi dizajn arhitekture, koji ima za cilj da premosti jaz između postojeće arhitekture zasnovane na IP-u i aplikacija usredsređenih na sadržaj, tako što se sadržaj prosljeđuje na osnovu njegovog imena umjesto njegove odredišne IP adrese [1].
+
+## Granice povjerenja
+
+![Botnet.png](./../Images/Ruteri_granice_povjerenja.jpeg)
+<br>
 
 ## Sadržaj rutera
 
@@ -31,6 +36,11 @@ Iako potrošači mogu da otkriju takav zatrovan sadržaj i ponovo izdaju zahtjev
 1.  zatrovani sadržaj se kešuje u ruterima duž putanje prenosa
 2.  zlonamjerni ruter na putu prenosa stalno truje sadržaj koji prolazi.
     Ovo je poznato kao napad trovanja sadržajem [1].
+
+## Stablo napada
+
+![Botnet.png](./../Images/Content_poisoning_stablo_napada.png)
+<br>
 
 ## Opis napada
 

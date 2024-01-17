@@ -4,6 +4,11 @@ Ako pričamo uopšteno, Cross-Site Scripting (XSS) su vrsta injekcije, u kojoj s
 
 Skoro svi kućni ruteri obezbjeđuju administrativni interface zasnovan na Web-u preko kojeg korisnik može lako da upravlja ruterom. Korisnici se moraju autentifikovati na ruter prije nego što pristupe bilo kom interaktivnom dijelu web interface-a [2], što daje mogućnost napadačima da izvrše napad.
 
+## Granice povjerenja
+
+![Botnet.png](./../Images/Ruter_interfejs_granice_povjerenja.jpeg)
+<br>
+
 ## Ruterov administrativni web interface
 
 Ruter čuva sva podešavanja za kućnu Wifi mrežu. Da bi se nešto promijenilo na mreži, korisnik se prvo prijavljuje svojim ruter kredencijalima na Login stranici, koja se najčešće nalazi na 192.168.1.1. ili 192.168.1.0. IP adresi [3].
@@ -21,6 +26,11 @@ U nastavku će se razmotriti ranjivosti i napadi na Belkin F7D4301 ruter [4].
 Najčešća ranjivost administrativnog web interface koja omogućava XSS napade jeste slab mehanizam validacije unosa, koji nije dovoljno strikto konfigurisan da blokira napade ubrizgavanjem koda.
 
 Druga ranjivost omogućava udaljenim napadačima da ubace proizvoljnu web skriptu ili HTML preko imena hosta DHCP klijenta. DHCP klijent je Internet host koji koristi DHCP protokol za dobijanje konfiguracionih parametara kao što je IP adresa. DHCP protokol koji nalaže da serveri upravljaju skupom jedinstvenih IP adresa, kao i informacijama o parametrima konfiguracije klijenta [5].
+
+## Stablo napada
+
+![Botnet.png](./../Images/XSS_stablo_napada.png)
+<br>
 
 ## Opisani slučajevi napada
 
