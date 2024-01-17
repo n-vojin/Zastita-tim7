@@ -28,7 +28,7 @@ Postoje različite tehnike koje maliciozni pojedinci mogu koristiti kako bi ugro
 
 Stavljanje uređaja koji zaključava ethernet portove na ruteru, bili oni zauzeti ili ne.
 
-<img title="" src="Images/Locking Device.png" alt="Locking Device.png" width="339" height="270">
+<img title="" src="./../Images/Locking Device.png" alt="Locking Device.png" width="339" height="270">
 
 Takođe i bolja kontrola pristupa otvorenim ethernet portovima.
 
@@ -36,7 +36,7 @@ Takođe i bolja kontrola pristupa otvorenim ethernet portovima.
 
 Ako napadač zna WiFi lozinku, ili ako je WiFi mreža otvorena on može da kuša napade defaultnih kredencijala, istraživanja su pokazala da većina ljudi ne promeni defaultne kredencijale rutera prilikom njihove instalacije. 
 
-<img title="" src="Images/DefaultCredentials.png" alt="DefaultCredentials.png" width="835" height="330">
+<img title="" src="./../Images/DefaultCredentials.png" alt="DefaultCredentials.png" width="835" height="330">
 
 Kod testiranih rutera se mogu uočiti defaultni kredencijali koji se ne razlikuju mnogo jedni od drugih i samim tim maliciozni korisnici mogu to veoma lako da iskoriste \[2\]. Ako im to pođe za rukom napadači su uspešno prešli jedan sloj odbrane, i otvaraju im se vrata raznim napadima:
 
@@ -58,7 +58,7 @@ Kada napadač ima fizički pristup ruteru osim što ima mogućnost da uradi sve 
 
 Iako je WiFi mreža, i aplikativni softver predhodno zaštićen ne defaultim šiframa, napadač može da iskoristi dugme za resetovanje rutera, i time dobjia sve defaultne kredencijale i informacije, koje su i u većini slučajeva prikazane direktno na ruteru.
 
-![Back of router.png](Images/Back%20of%20router.png)
+![Back of router.png](./../Images/Back%20of%20router.png)
 
 ## Mitigacije
 
