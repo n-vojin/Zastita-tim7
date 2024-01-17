@@ -1,6 +1,6 @@
 ### Opis
 
-<img title="" src="./../Images/WiFi granica poverenja.png" alt="loading-ag-205" style="zoom:67%;" data-align="center">
+<img title="" src="./../Images/WiFi granica poverenja.png" alt="loading-ag-205" style="zoom:55%;" data-align="center">
 
 U današnje vreme bežični internet  je najrasprostranjeniji izvor pristupa internetu, bilo u kućama, stanovima, poslovnim prostorima ili javnim hotspotovima. Samim tim on prestavlja veoma atraktivno polje za napad. Pretnja koja je prisutna, kao što je zlonamerni blizanac. Napadač može imitirati legitimnu tačku pristupa (LAP - Legitimate Access Point), jer je lako falsifikovati naziv mreže (**SSID**) i **MAC** adresu (BSSID) legitimne tačke pristupa. Takva lažna tačka pristupa koja tvrdi da je legitimna poznata je kao zlonamerni blizanac (evil twin). Hotspot i softverske sposobnosti na klijentskim uređajima (laptop/mobilni) dovoljni su za pokretanje napada zlonamernog blizanca. Ako se klijenti povežu s zlonamernim blizancem, on može biti "čovek-u-sredini" između LAP-a i klijenata i prisluškivati ili manipulisati osetljivim podacima klijenata \[1\]. Tačka pristupa je zapravno javni ili bilo koji drugi ruter koji omogućava korisnicima pristup internetu.
 
