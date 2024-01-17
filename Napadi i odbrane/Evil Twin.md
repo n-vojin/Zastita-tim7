@@ -50,10 +50,10 @@ Predložen EvilScout sistem.
 
 
 
+## Reference
+
 
 
 \[1\] [EvilScout: Detection and Mitigation of Evil Twin Attack in SDN Enabled WiFi Pragati Shrivastava , Mohd Saalim Jamal , and Kotaro Kataoka](https://sci-hub.se/10.1109/tnsm.2020.2972774)
 
 [2] [802.11 Mgmt : Beacon Frame | mrn-cciew](https://mrncciew.com/2014/10/08/802-11-mgmt-beacon-frame/)
-
-

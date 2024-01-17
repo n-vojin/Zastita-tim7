@@ -1,4 +1,8 @@
-### Fingerprinting
+## Granice poverenja
+
+![loading-ag-125](./../Images/Internet%20granica.png) 
+
+## Fingerprinting
 
 Fingerprinting rutera se odnosi na tehniku identifikacije i prikupljanja informacija o ruteru na osnovu njegovih jedinstvenih karakteristika i ponašanja. Iako je glavni cilj fingerprintinga rutera često poboljšanje bezbednosti mreže, postoji i rizik da napadač dođe do tih informacija i da njih iskoristi. Ako napadač identifikuje marke rutera i cilja određene proizvođače sa poznatim sigurnosnim propustima, može doći do zloupotrebe, pogotovo ako je reč o verzijama firmware-a koji imaju poznate propuste koji su lako iskoristivi.
 
@@ -8,7 +12,7 @@ Tabela 1 sumira glavne potpise rutera, sa povezanim brendovima rutera i operativ
 
 *Šta bi se moglo desiti ako napadač lako može identifikovati brendove rutera i ciljati određenog dobavljača s poznatim bezbednosnim propustima?* Ovo pitanje je motivisano nedavnim otkrićem pet ranjivosti u različitim Cisco uređajima (četiri od njih dovode do ranjivosti na izvršavanje udaljenog koda, a jedna do ranjivosti [DoS](https://github.com/n-vojin/Zastita-tim7/blob/main/DoS%20Napad.md)), kao i otkrićem Bleichenbacher oracle-a(tj. adaptivni napad izbora šifrovanog teksta protiv nekih protokola zasnovanih na RSA) u implementacijama IKEv1 kod četiri velika proizvođača mrežne opreme (Cisco, Huawei, Clavister i ZyXEL). Ovi napadi nisu ograničeni na nekoliko rasutih uređaja, već mogu uticati na mnogo različitih modela hardvera za svakog proizvođača, s obzirom da su ranjivosti pronađene u softveru zajedničkom za mnoge različite proizvode. \[1\]
 
-### Fingerprinting u svrhe istrazivanja
+## Fingerprinting u svrhe istrazivanja
 
 Korišćenjem više različitih tehnologija istraživači su uspeli da ispitaju koji su to ruteri, od kojih proizvođača i sa kakvim operativnim sistemima, su najrasprostranjeniji kod korisnika u SAD-u. Došli su do sledećih podataka:
 
@@ -18,7 +22,7 @@ Iskorišćavanjem metoda fingerprinting-a, možemo proučiti raspodelu hardvera 
 
 Naravno do ovih informacija mogu da dođu i zlonamerni korisnici, korišćenem sličnih metoda, isto tako mogu da ih zloupotrebe ako gađaju poznate slabe tačke kod rutera određenih proizvođača.
 
-### Alati za fingerprinting
+## Alati za fingerprinting
 
 Postoje razni alati koji su poznati i mogu da omoguće prikupljanje bitnih informacija za rutere. Neki od njih su:
 
@@ -26,7 +30,7 @@ Postoje razni alati koji su poznati i mogu da omoguće prikupljanje bitnih infor
 
 **MIDAR** proširuje nedavne radove u vezi sa razrešavanjem aliasa zasnovanim na IP ID-ju novim, visoko skalabilnim tehnikama koje minimiziraju lažne pozitivne rezultate dovoljno da postignu visoku pozitivnu prediktivnu vrednost na internetu (tj. milioni adresa). \[3\]
 
-### Mitigacije rizika
+## Mitigacije rizika
 
 Najveću ulogu u mitigaciji bi trebali da preduzmu sami proizvođači rutera i operateri.
 
