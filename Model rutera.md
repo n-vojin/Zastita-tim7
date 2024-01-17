@@ -39,7 +39,7 @@ Uloga rutera se ogleda u nekoliko tačaka:
 
 ## Model granica povjerenja
 
-![Botnet.png](./../Images/ModelPretnji.png)
+![Botnet.png](./Images/ModelPretnji.png)
 
 Proučavajući napade, izdvajaju se pet tačaka koje napadači najčešće koriste za pristup ruteru u cilju njihovog napada:
 
