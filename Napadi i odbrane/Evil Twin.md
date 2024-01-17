@@ -22,7 +22,7 @@ U WiFi mreži, tačka pristupa (AP) periodično emituje svoje **beacon frame**-o
 
 *Slika 2. EvilTwin lansiran od strane napadača*
 
-![Imitiranje AP](F:\skola\FTN\ZASTITA\GIT%20PROJEKAT\Zastita-tim7\Images\Imitiranje%20AP.png)
+![loading-ag-775](./../Images/Imitiranje%20AP.png)
 
 *Slika 3. EvilTwin imitira legitimnu tačku pristupa(AP)*
 
