@@ -1,4 +1,4 @@
-### Opis
+## Granice poverenja
 
 <img title="" src="./../Images/WiFi granica poverenja.png" alt="loading-ag-205" style="zoom:55%;" data-align="center">
 
@@ -10,7 +10,7 @@ U današnje vreme bežični internet  je najrasprostranjeniji izvor pristupa in
 
 
 
-### Evil Twin
+## Evil Twin
 
 U WiFi mreži, tačka pristupa (AP) periodično emituje svoje **beacon frame**-ove kako bi pokazala svoje prisustvo u bežičnom okruženju. Klijent otkriva tačke pristupa slušajući njih kako se oglašavaju. Oni sami po sebi ne mogu biti šifrovani. U suprotnom, klijent ne može da se poveže s tačkom pristupa. Kao rezultat toga, ova ranjivost pruža odličnu priliku napadačima da prodiru u WiFi mrežu i izvode napade poput zlonamernog blizanca.
 
@@ -26,7 +26,7 @@ U WiFi mreži, tačka pristupa (AP) periodično emituje svoje **beacon frame**-o
 
 *Slika 3. EvilTwin imitira legitimnu tačku pristupa(AP)*
 
-### Napad
+## Napad
 
 Postoje dve metode Evil Twin napada: 
 
@@ -44,7 +44,7 @@ Postoje dve metode Evil Twin napada:
 
 Na javnim WiFi mrežama, neki od dobro poznatih napada uključuju pasivno slušanje i phishing. Zlonamerni blizanac uvodi znatno ozbiljnije sigurnosne pretnje u odnosu na pasivno praćenje kanala jer: 1) zlonamerni blizanac je sposoban preusmeriti komunikaciju WiFi klijenata; 2) sposoban je izazvati zasićenje kanala; 3) može odlagati komunikaciju s klijentom. Phishing napadi na WiFi mrežama uglavnom su povezani sa MAC slojem. Napadi ribarenja koje izvode WiFi klijenti lako se mogu uočiti. Stoga, ozbiljniji napadi ribarenja u WiFi mrežama zahtevaju iskorišćavanje tačaka pristupa. Napadač može iskoristiti tačke pristupa da izvede ribarenje na sledeće načine: 1) kompromitovanjem LAP-a ili 2) pokretanjem zlonamernog blizanca. Kompromitovanje tačke pristupa u WiFi mrežama je teško, ali pokretanje zlonamernog blizanca je jednostavno. Stoga je napad zlonamernog blizanca lako izvesti, unoseći ozbiljne pretnje, i teško ga je detektovati.
 
-### Mitigacije
+## Mitigacije
 
 Predložen EvilScout sistem.
 
