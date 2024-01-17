@@ -45,6 +45,7 @@ Kod testiranih rutera se mogu uočiti defaultni kredencijali koji se ne razlikuj
 - [UI Redressing](https://github.com/n-vojin/Zastita-tim7/blob/main/UI%20Redressing.md)
   - Clickjacking
   - Tabjacking
+- [Evil Twin](https://github.com/n-vojin/Zastita-tim7/blob/main/Napadi%20i%20odbrane/Evil%20Twin.md)
 
 ### Mitigacije
 
