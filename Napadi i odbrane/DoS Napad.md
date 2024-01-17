@@ -41,7 +41,7 @@ Niskofrekventni napadi uskraćivanja usluge putem TCP-a predstavljaju novu vrstu
 
 • Filter se koristi kako bi se blokirali tokovi koji su identifikovani kao zlonamerni od strane modula objekta.
 
-<img title="" src="./../Images/Low rate DoS Detection sistem on enge router.png" alt="Low rate DoS Detection sistem on enge router.png" width="470" height="273"><img title="" src="Images/Architercture of the low rate DoS sistem.png" alt="Architercture of the low rate DoS sistem.png" width="313" height="277">
+<img title="" src="./../Images/Low rate DoS Detection sistem on enge router.png" alt="Low rate DoS Detection sistem on enge router.png" width="470" height="273"><img title="" src="./../Images/Architercture of the low rate DoS sistem.png" alt="Architercture of the low rate DoS sistem.png" width="313" height="277">
 
 Predloženi sistem za odbranu se postavlja na edge router mreže koja treba da se zaštiti.
 
