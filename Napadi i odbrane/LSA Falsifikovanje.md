@@ -31,11 +31,11 @@ međusobno povezani. Kako bi čvor otkrio svoje susjedne rutere, pomoću OSPF pr
 
 Kada se susjedni ruter pronađe preko protokola, pošiljalac prolazi kroz „proces razmjene baze podataka“ da bi sinhronizovao svoju bazu podataka. Zatim se informacije o lokalnim susjedima pošiljaoca sastavljaju u listu svih veza ka susjednim ruterima LSA (Link State Advertisement) [3], te emituju preko pouzdane inteligentne flooding šeme [4] svim ostalim ruterima.
 
-Kada svi ruteri imaju ažuriranu bazu podataka, svaki ruter može da koristi Dijkstrin algoritam [5] za izračunavanje stabla najkraćeg puta sa drugim ruterima, time formira potpunu sliku rutiranja u mreži, koja se drugačije naziva tabela rutiranja prikazane na slici 1.
+Kada svi ruteri imaju ažuriranu bazu podataka, svaki ruter može da koristi Dijkstrin algoritam [5] za izračunavanje stabla najkraćeg puta sa drugim ruterima, time formira potpunu sliku rutiranja u mreži, koja se drugačije naziva tabela rutiranja prikazane na slici ispod.
 
 ![Botnet.png](./../Images/routing_table.png)
 <br>
-Slika 1. Tabela rutiranja
+
 
 ## Ranjivosti
 
@@ -50,25 +50,22 @@ Neke ranjivosti koje se mogu uočiti kroz stvaranje tabele rutiranja i djelovanj
 
 **Adjacency Spoofing napad**
 
-Gateway je uređaj za rutiranje koji propušta saobraćaj između različitih podmreža i mreža, pa je samim tim doprinos ruteru i OSPF protokolu za dinamičko otkrivanje susjeda pomoću zdravo paketa. Kada se napadač poveže sa mrežnim prolazom (gateway) u istoj podmreži, on prvo hvata zdravo paket i time dobija parametre. Pomoću tih parametara napadač pravi svoj zdravo paket. Gateway prima taj paket, smatrajući da je napadačev ruter standardni susjedni ruter i njemu potom šalje poruku opisa baze podataka (DBD), time razmjenjuju svoje liste veza sa ostalim ruterima (LSA). Napadač ovim dobija najkraće puteve do ostalih članova mreže, te svojim LSA-om ubacuje maliciozni kod. Gateway primivši taj lažni LSA od napadača, preplavljuje tim čitavu mrežu. Ostali ruteri ažuriraju svoje LSA-ove i time se i oni zarazuju lažnim rutama. Napad je slikovito prikazan na slici 3.
+Gateway je uređaj za rutiranje koji propušta saobraćaj između različitih podmreža i mreža, pa je samim tim doprinos ruteru i OSPF protokolu za dinamičko otkrivanje susjeda pomoću zdravo paketa. Kada se napadač poveže sa mrežnim prolazom (gateway) u istoj podmreži, on prvo hvata zdravo paket i time dobija parametre. Pomoću tih parametara napadač pravi svoj zdravo paket. Gateway prima taj paket, smatrajući da je napadačev ruter standardni susjedni ruter i njemu potom šalje poruku opisa baze podataka (DBD), time razmjenjuju svoje liste veza sa ostalim ruterima (LSA). Napadač ovim dobija najkraće puteve do ostalih članova mreže, te svojim LSA-om ubacuje maliciozni kod. Gateway primivši taj lažni LSA od napadača, preplavljuje tim čitavu mrežu. Ostali ruteri ažuriraju svoje LSA-ove i time se i oni zarazuju lažnim rutama. Napad je slikovito prikazan na slici ispod.
 
-![Botnet.png](Images/adjacency_spoofig_attack.png)
+![Botnet.png](./../Images/adjacency_spoofig_attack.png)
 <br>
-Slika 3. Adjacency Spoofing napad
 
 **Single Path Injection Attack**
 
-Single Path Injection napad želi da ubaci lažni LSA preko srednjeg „odskočnog rutera“ do određenog „zagađenog rutera“. Napadač može poslati lažni LSA sa hosta na zagađen ruter R8 preko rutera odskočne daske R6. Izvorna IP adresa u ovom lažnom LSA je postavljena na adresu f1/0, a vrijednost ID-a je postavljena na ID R6, prikazanog na slici 4. Na ovaj način, zagađeni ruter R8 vjeruje da je ovaj lažni LSA došao iz rutera R6. R8 je prvi ruter koji čuva lažni LSA u svojoj bazi podataka o stanju veze i šalje potvrdu stanja veze svim ostalim ruterima u OSPF mrežama.
+Single Path Injection napad želi da ubaci lažni LSA preko srednjeg „odskočnog rutera“ do određenog „zagađenog rutera“. Napadač može poslati lažni LSA sa hosta na zagađen ruter R8 preko rutera odskočne daske R6. Izvorna IP adresa u ovom lažnom LSA je postavljena na adresu f1/0, a vrijednost ID-a je postavljena na ID R6, prikazanog na slici ispod. Na ovaj način, zagađeni ruter R8 vjeruje da je ovaj lažni LSA došao iz rutera R6. R8 je prvi ruter koji čuva lažni LSA u svojoj bazi podataka o stanju veze i šalje potvrdu stanja veze svim ostalim ruterima u OSPF mrežama.
 
-![Botnet.png](Images/Network_topology_single_path_injection_attack.png)
+![Botnet.png](./../Images/Network_topology_single_path_injection_attack.png)
 <br>
-Slika 4. Topologija mreže
 
-Slika 5 prikazuje tri situacije slanja paketa ažuriranja stanja veze sa LSA. Prve dvije situacije prikazuju normalne interaktivne procese u fazi uspostavljanja susjedne veze i fazi LSA prenosa. Posljednji je interaktivni proces između napadača i zagađenog rutera prilikom slanja lažnog LSA.
+Slika ispod prikazuje tri situacije slanja paketa ažuriranja stanja veze sa LSA. Prve dvije situacije prikazuju normalne interaktivne procese u fazi uspostavljanja susjedne veze i fazi LSA prenosa. Posljednji je interaktivni proces između napadača i zagađenog rutera prilikom slanja lažnog LSA.
 
-![Botnet.png](Images/interactivities_link_state_update_process.png)
+![Botnet.png](./../Images/interactivities_link_state_update_process.png)
 <br>
-Slika 5. Slanje i ažuriranja stanja veze sa LSA
 
 U normalnoj fazi, ruter šalje LSA drugim ruterima, potom ubacuje LSA u svoju listu retransmisije stanja lokalne veze (lista kreirana za prenos LSA-ova), a zatim čeka potvrdu stanja veze u datom vremenskom intervalu. Ako nijedna potvrda stanja veze nije poslata pre isteka vremena, ruter ponovo emituje LSA. U suprotnom, ruter potvrđuje LSA i briše LSA sa liste retransmisije stanja lokalne veze.
 
