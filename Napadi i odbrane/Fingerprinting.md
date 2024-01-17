@@ -2,7 +2,7 @@
 
 Fingerprinting rutera se odnosi na tehniku identifikacije i prikupljanja informacija o ruteru na osnovu njegovih jedinstvenih karakteristika i ponašanja. Iako je glavni cilj fingerprintinga rutera često poboljšanje bezbednosti mreže, postoji i rizik da napadač dođe do tih informacija i da njih iskoristi. Ako napadač identifikuje marke rutera i cilja određene proizvođače sa poznatim sigurnosnim propustima, može doći do zloupotrebe, pogotovo ako je reč o verzijama firmware-a koji imaju poznate propuste koji su lako iskoristivi.
 
-<img title="" src="Images/Router signature.png" alt="Images/Router signature.png">
+<img title="" src="./../Images/Router signature.png" alt="Images/Router signature.png">
 
 Tabela 1 sumira glavne potpise rutera, sa povezanim brendovima rutera i operativnim sistemima rutera.
 
@@ -12,7 +12,7 @@ Tabela 1 sumira glavne potpise rutera, sa povezanim brendovima rutera i operativ
 
 Korišćenjem više različitih tehnologija istraživači su uspeli da ispitaju koji su to ruteri, od kojih proizvođača i sa kakvim operativnim sistemima, su najrasprostranjeniji kod korisnika u SAD-u. Došli su do sledećih podataka:
 
-<img title="" src="Images/Fingerprinting.png" alt="Images/Fingerprinting.png" width="396" height="369">
+<img title="" src="./../Images/Fingerprinting.png" alt="Images/Fingerprinting.png" width="396" height="369">
 
 Iskorišćavanjem metoda fingerprinting-a, možemo proučiti raspodelu hardvera u mreži. Slika prikazuje globalnu distribuciju potpisa kako za adrese, tako i za rutere na internetu. Što se adresa tiče, primetno je da su Cisco potpisi dominantni, sa više od 40% adresa u toj klasi. Druga najvažnija klasa je BAL klasa (tj. Brocade, Alcatel i Linux mašine) sa oko 25% adresa. Nakon toga, sa udelom od 15% adresa, dolazi potpis &lt; 255, ∗ &gt;.  \[1\]
 
