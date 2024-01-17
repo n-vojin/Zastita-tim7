@@ -12,7 +12,7 @@ Time dobija pristup ruterovom softveru, poznatom još kao firmware, koji impleme
 
 Izgled ruterovog administrativnog web interface-a sa svojim opcijama prikazan je na slici ispod.
 
-![Botnet.png](Images/RouterAdminWebInterface.png)
+![Botnet.png](./../Images/RouterAdminWebInterface.png)
 
 U nastavku će se razmotriti ranjivosti i napadi na Belkin F7D4301 ruter [4].
 
@@ -53,7 +53,7 @@ Uvodimo Web server koji bi služio JavaScript code kojim predajemo HTML stranicu
 
 Dijagram ovog napada je priložen ispod.
 
-![Botnet.png](Images/XSSThroughDHCP.png)
+![Botnet.png](./../Images/XSSThroughDHCP.png)
 
 ## Posljedice napada
 
