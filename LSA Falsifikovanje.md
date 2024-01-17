@@ -16,8 +16,11 @@ U daljem nastavku teksta obradiće se LSA falsifikovanje kao najčešći napad n
 
 Open Shortest Path First (OSPF) je jedan od najčešće korišćenih protokola za rutiranje. Predstavnik je protokol za rutiranje stanja veza, što znači da ruteri razmjenjuju informacije o topologiji sa svojim najbližim susjedima. Glavna odgovornost OSPF protokola za rutiranje je da omogući svim ruterima unutar autonomnog sistema mreže da naprave svoje tabele rutiranja i ažuriraju ih kada dođe do promjene topologije pomenutog sistema [2].
 
-## Formiranje tabele rutiranja
+## Tabela rutiranja
 
+Tabele rutiranja su neophodne u rutiranju jer održavaju mapu povezanih mreža, koja osigurava da je proces prosljeđivanja paketa što efikasniji. Bez prisustva tabela rutiranja, ruteri ne bi imali pojma kako da pakete pošalju do ciljanih odredišta. Cijeli proces prosleđivanja bi bio zamoran i dugotrajan. Može se posmatrati kao baza podataka koja čuva lokaciju rutera na osnovu njihovih IP adresa [7].
+
+**Formiranje tabele rutiranja**
 Unutar mreže svaki čvor konstruiše mapu mreže
 povezanosti, u obliku grafikona, koji pokazuje kako su čvorovi
 međusobno povezani. Kako bi čvor otkrio svoje susjedne rutere, pomoću OSPF protokola prvo se šalju „zdravo paketi“. Postoje tri komponente u zaglavlju zdravo paketa koje čuvaju informacije o statusu rutera:
@@ -43,7 +46,9 @@ Neke ranjivosti koje se mogu uočiti kroz stvaranje tabele rutiranja i djelovanj
 3.  . Kada se primi lažni LSA sa poljem Advertising Router koji je jednak ID trenutnog rutera moglo bi se zaobići neki bezbjednosti mehanizmi koje OSPF nalaže
 4.  Tokom faze izračunavanja tabele rutiranja, ruterovi LSA-ovi se traže u bazi podataka koristeći samo polje ID stanja veze [6].
 
-## Adjacency Spoofing napad
+## Opisani slučajevi napada
+
+**Adjacency Spoofing napad**
 
 Gateway je uređaj za rutiranje koji propušta saobraćaj između različitih podmreža i mreža, pa je samim tim doprinos ruteru i OSPF protokolu za dinamičko otkrivanje susjeda pomoću zdravo paketa. Kada se napadač poveže sa mrežnim prolazom (gateway) u istoj podmreži, on prvo hvata zdravo paket i time dobija parametre. Pomoću tih parametara napadač pravi svoj zdravo paket. Gateway prima taj paket, smatrajući da je napadačev ruter standardni susjedni ruter i njemu potom šalje poruku opisa baze podataka (DBD), time razmjenjuju svoje liste veza sa ostalim ruterima (LSA). Napadač ovim dobija najkraće puteve do ostalih članova mreže, te svojim LSA-om ubacuje maliciozni kod. Gateway primivši taj lažni LSA od napadača, preplavljuje tim čitavu mrežu. Ostali ruteri ažuriraju svoje LSA-ove i time se i oni zarazuju lažnim rutama. Napad je slikovito prikazan na slici 3.
 
@@ -51,7 +56,7 @@ Gateway je uređaj za rutiranje koji propušta saobraćaj između različitih p
 <br>
 Slika 3. Adjacency Spoofing napad
 
-## Single Path Injection Attack
+**Single Path Injection Attack**
 
 Single Path Injection napad želi da ubaci lažni LSA preko srednjeg „odskočnog rutera“ do određenog „zagađenog rutera“. Napadač može poslati lažni LSA sa hosta na zagađen ruter R8 preko rutera odskočne daske R6. Izvorna IP adresa u ovom lažnom LSA je postavljena na adresu f1/0, a vrijednost ID-a je postavljena na ID R6, prikazanog na slici 4. Na ovaj način, zagađeni ruter R8 vjeruje da je ovaj lažni LSA došao iz rutera R6. R8 je prvi ruter koji čuva lažni LSA u svojoj bazi podataka o stanju veze i šalje potvrdu stanja veze svim ostalim ruterima u OSPF mrežama.
 
@@ -72,6 +77,22 @@ Ovaj napad je napredniji jer u potpunosti može zaobići Fight-back mitigaciju. 
 Nadovezujući se na prethodne paragrafe, kada napadač pošalje lažni LSA sa ID-om rutera odskočne daske, lista retransmisije stanja veze rutera odskočne daske neće sadržati nikakve informacije o ovom lažnom LSA. Stoga, kada ruter odskočne daske primi potvrdu o stanju veze koja sadrži lažni LSA od zagađenog rutera, on samo odbacuje ovu potvrdu direktno i ne pokreće mehanizam Fight-back.
 
 U procedurama napada ubrizgavanjem jedne putanje, možemo zaključiti da se ovaj napad dešava samo kada postoji jedan prenosni put između rutera odskočne daske i zagađenog rutera. Ukoliko topologija izgleda kao na slici 4, lako se napad može propagirati i na ostale rutete.
+
+## Posljedice
+
+Posljedice koje bi LSA ostavio na rutiranje:
+
+- **Rutiranje biva nedosljedno**
+  Falsifikovanje LSA može dovesti do nedosljednosti u informacijama o rutiranju preko rutera unutar OSPF mreže.
+
+- **Neovlašćenog pristupa**
+  Napadači mogu koristiti LSA falsifikovanje kao sredstvo za dobijanje neovlašćenog pristupa dijelovima mreže. Manipulišući LSA-ovima, oni bi mogli preusmjere saobraćaj kroz putanju koju kontrolišu ili da ugroze bezbjednost određenih segmenata mreže.
+
+- **Izolacija i mrežno particionisanje**
+  Ova fragmentacija može da izoluje segmente mreže jedan od drugog, ometajući komunikaciju.
+
+- **Integritet i povjerljivost podataka**
+  Falsifikovanje LSA može otkriti osjetljive podatke i učiniti mrežu podložnom neovlašćenom pristupu. Ovo može dovesti do presretanja saobraćaja, prisluškivanja ili čak man in the middle napada.
 
 ## Mitigacije
 
@@ -99,3 +120,5 @@ Moguće mjera za ublažavanje pomenutih ranjivosti:
 \[5\] [M. Noto, H.Sato A method for the shortest path search by extended Dijkstra algorithm ](https://ieeexplore.ieee.org/abstract/document/886462)
 
 \[6\][Gabi Nakibly, Adi Sosnovich, Eitan Menahem, Ariel Waizel, Yuval Elovici. OSPF Vulnerability to Persistent Poisoning Attacks: A Systematic Analysis](https://csaws.cs.technion.ac.il/~gnakibly/papers/ACSAC14.pdf)
+
+[7] [Understanding Routing Table](https://www.baeldung.com/cs/routing-table-entry)
