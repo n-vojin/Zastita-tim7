@@ -8,10 +8,10 @@ Ovaj istraživački rad istražuje ključne aspekte sigurnosti WiFi rutera, prou
 
 Rad je izdjeljen u dvije cjeline:
 
-- <a href="./Model_rutera">**Model rutera** </a>
-  - <a href="./Model_rutera/Ruter_i_njegove_funkcionalnosti.md"> Ruter i njegove funkcionalnosti </a>
+- <a href="./Model rutera">**Model rutera** </a>
+  - <a href="./Model rutera/Ruter i njegove funkcionalnosti.md"> Ruter i njegove funkcionalnosti </a>
     Kroz ovaj dokument čitaoc se može upoznati sa pojmom rutera, rutiranja i značajem kroz njegove funkcionalnosti u mreži.
-  - <a href="./Model_rutera/Dijelovi_rutera.md"> Dijelovi rutera</a>
+  - <a href="./Model rutera/Dijelovi rutera.md"> Dijelovi rutera</a>
     Dokument obrazlaže samu građu kao i detaljniji osvrt na dijelove koji bi potencijalno prouzrokovale ranjivosti samog rutera. U sklopu je prikazana i slika modela.
 - <a href="./Napadi i odbrane">**Napadi i odbrane**</a>
   U ovoj kolekciji dato je objašnjenje kako dolazi do napada, potencijalne posljedice i načini zaštite:
