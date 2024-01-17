@@ -95,7 +95,7 @@ Kako se može izmjeriti reputaciju susjednog rutera? Intuitivno, ruter koji je b
 
 Kako se može znati da li je zlonamjerni rutera blizu napadača i kako se može kvantifikovati ova udaljenost? U NDN-u, sadržaj (uključujući zatrovani sadržaj) se prosleđuje sa više putanja. Drugim riječima, ako mnogo susjednih rutera primi isti dio zatrovanog sadržaja, ovaj zatrovani sadržaj je trebalo da bude široko rasprostranjen i zlonamjerni ruter koji je zatrovao sadržaj trebalo bi da bude daleko. Daje se konkretan primjer na slici ispod.
 
-![Botnet.png](Images/AnAttackProcess.png)
+![Botnet.png](./../Images/AnAttackProcess.png)
 
 Napadač je falsifikovao dio sadržaja i iskoristio ga da zadovolji zahtjeve koje su poslali potrošači. Pošto je napadač udaljen od rutera A, ovaj falsifikovani sadržaj će se širiti prije nego što stigne do rutera A. Kao što je prikazano na slici, ruter A je primio dvije kopije falsifikovanog sadržaja. Naprotiv, ruter B je primio samo jednu kopiju falsifikovanog sadržaja, pošto je bliži napadaču. Ovo zapažanje omogućava kvantifikaciju udaljenosti između datog rutera i zlonamjernog rutera korišćenjem broja zatrovanog sadržaja koji se prima za određeni sadržaj.
 Za potrebe ROM mehanizma uvode se tri parametra:
@@ -107,19 +107,19 @@ Za potrebe ROM mehanizma uvode se tri parametra:
 **Odnos trovanja (Poisoning ratio PR)**
 Uvodimo se da bi označili procenat zatrovanih kopija primljenih za određeni sadržaj, gdje se računa kao proporcija broja zatrovanih skupova paketa sadržaja koje prosljeđuju ruteri i ukupnog broja kopija primljenih paketa. Vrijednost PR se na neki način može koristiti za određivanje udaljenosti između rutera i napadača. Velika PR vrijednost implicira veliku vjerovatnoću da je ruter udaljen od napadača i da je stoga manje vjerovatno da je zlonamjeran. Mala PR vrijednost implicira veliku mogućnost da je ruter u blizini napadača, pa je vjerovatnije da je zlonamjeran. Formula po kojoj se PR računa prikazana je ispod.
 
-![Botnet.png](Images/PRFormula.png)
+![Botnet.png](./../Images/PRFormula.png)
 
 **Rezultat povratne reputacije (Feedback reputation score FRS)**
 Ovdje se postavlja pitanje kako da se kazne ruteri prema njihovoj relevantnosti (uhvaćenoj u PR vrijednosti) kod napadača. FRS predstavlja jačinu kazne rutera koji su prosljeđivali otrovane sadržaje. Ako ruter prosleđuje zatrovan sadržaj, njegovoj reputaciji će biti dodat odgovarajući negativni FRS kako bi se spriječio ponovno prosleđivanje zatrovanog sadržaja. Ažuriranje FRS će pratiti princip „linearnog povećanja, eksponencijalnog smanjenja“, drugim rečima, značajno se smanjuje reputacija sumnjivog susjednog rutera i polako povratiti njegovu reputaciju ako kasnije ne proslijedi zatrovan sadržaj. Konkretno, FRS se može izračunatiprema formuli na slici ispod.
 
-![Botnet.png](Images/FRSFormula.png)
+![Botnet.png](./../Images/FRSFormula.png)
 
 Ci predstavlja sadržaj rutera j koji se prosljeđuje ruteru k. θ je faktor kazne. Veći θ ukazuje na ozbiljniju kaznu koja se primjenjuje na ruter j. α je parametar prilagođavanja kojim se podešava intenzitet kazne.
 
 **Vrijednost reputacije (Reputation value RV)**
 Vrijednost reputacije je kontramjera, koja se oslanja na reputaciju susjednih rutera, na osnovu koje ruter može da odredi da li treba da preuzme sadržaj od ovih susjeda. Da bi procijenili koliko povjerenja može da ima susjedni ruter, akumuliraju se povratni rezultati reputacije, izračunavajući vrednost reputacije. Vrijednost reputacije od rutera k do njegovog susednog rutera j može se izračunati formulom na slici ispod.
 
-![Botnet.png](Images/RVFormula.png)
+![Botnet.png](./../Images/RVFormula.png)
 
 N predstavlja sadržaj koji dolazi od rutera j do rutera k u vremenskom intervalu [t − 1, t] i t ≥ 1.
 h ∈ [1, N] označava rezultate verifikacije sadržaja koji prolaze kroz ovaj ruter u ovom vremenskom intervalu . Vrijednost reputacije RV u trenutku t može se izračunati korišćenjem RV vriednosti u vremenu t−1 koja se pomnoži sa faktorom opadanja vremena d, te se doda akumulacija FRS dobijena unutar [t − 1, t].
