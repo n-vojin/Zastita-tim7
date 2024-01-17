@@ -18,7 +18,7 @@ U WiFi mreži, tačka pristupa (AP) periodično emituje svoje **beacon frame**-o
 
 **Beacon frame** je vrsta upravljačkog okvira u IEEE 802.11 WLAN (bežičnim lokalnim mrežama). Sadrži informacije o mreži. Beacon okviri se periodično šalju; služe da obaveste o prisustvu bežične lokalne mreže i pruže vremenski signal za sinhronizaciju komunikacije sa uređajima koji koriste mrežu [2].
 
-<img title="EvilTwin lansiran od strane napadača" src="file:///F:/skola/FTN/ZASTITA/GIT PROJEKAT/Zastita-tim7/Images/EvilTwin lansiran.png" alt="EvilTwin lansiran" data-align="left">
+<img title="EvilTwin lansiran od strane napadača" src="./../Images/EvilTwin lansiran.png" alt="loading-ag-777" data-align="left">
 
 *Slika 2. EvilTwin lansiran od strane napadača*
 
@@ -34,11 +34,11 @@ Postoje dve metode Evil Twin napada:
 
 - **Aktivni Evil Twin napad:** Zlonamerni blizanac cilja klijente koji su već povezani sa legitimnom tačkom pristupa (LAP) izvođenjem napada deautentifikacije preko LAP-a. Zbog toga, klijent se odjavljuje iz veze s LAP-om i povezuje se sa zlonamernim blizancem, kako je prikazano na slici 5.
 
-![PasivniEvilTwin](F:\skola\FTN\ZASTITA\GIT%20PROJEKAT\Zastita-tim7\Images\PasivniEvilTwin.png)
+![loading-ag-779](./../Images/PasivniEvilTwin.png)
 
 *Slika 4. EvilTwin čeka žrtve (pasivni napad)*
 
-![AktivniEvilTwin](F:\skola\FTN\ZASTITA\GIT%20PROJEKAT\Zastita-tim7\Images\AktivniEvilTwin.png)
+![loading-ag-781](./../Images/AktivniEvilTwin.png)
 
 *Slika 5. EvilTwin aktivno odjavljuje korisnike (aktivni napad)*
 
