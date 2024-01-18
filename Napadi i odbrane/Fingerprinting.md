@@ -4,7 +4,7 @@
 
 ## Stablo napada
 
-## 
+![loading-ag-119](./../Images/Fingerprinting%20stanblo.png) 
 
 ## Fingerprinting
 
