@@ -1,3 +1,7 @@
+## Granice poverenja
+
+<img title="" src="./../Images/WiFi Ethernet Granica.png" alt="loading-ag-180" data-align="center">
+
 ## Napad preko direktne povezanosti
 
 Ovaj napad je prouzrokovan specificnim posledicama i zahteva da se napadač poveže na ruter direktno, putem ethernet kabla, ili pak putem WiFi tehnologije. Obično ga vrši neka osoba koja je insider, ima pristup etherenet konekciji, ili zna WiFi lozinku.
@@ -26,7 +30,7 @@ Postoje različite tehnike koje maliciozni pojedinci mogu koristiti kako bi ugro
 
 ### Mitigacije
 
-Stavljanje uređaja koji zaključava ethernet portove na ruteru, bili oni zauzeti ili ne.
+Stavljanje uređaja koji zaključava ethernet portove, bili oni zauzeti ili ne.
 
 <img title="" src="./../Images/Locking Device.png" alt="Locking Device.png" width="339" height="270">
 
@@ -40,12 +44,12 @@ Ako napadač zna WiFi lozinku, ili ako je WiFi mreža otvorena on može da kuša
 
 Kod testiranih rutera se mogu uočiti defaultni kredencijali koji se ne razlikuju mnogo jedni od drugih i samim tim maliciozni korisnici mogu to veoma lako da iskoriste \[2\]. Ako im to pođe za rukom napadači su uspešno prešli jedan sloj odbrane, i otvaraju im se vrata raznim napadima:
 
--  Cross Site Scripting ([XSS](https://github.com/n-vojin/Zastita-tim7/blob/main/XSS.md))
+-  Cross Site Scripting ([XSS](https://github.com/n-vojin/Zastita-tim7/blob/main/Napadi%20i%20odbrane/DoS%20Napad.md))
 -  Cross-Site Request Forgery (CSRF)
-- [UI Redressing](https://github.com/n-vojin/Zastita-tim7/blob/main/UI%20Redressing.md)
+- [UI Redressing](https://github.com/n-vojin/Zastita-tim7/blob/main/Napadi%20i%20odbrane/DoS%20Napad.md)
   - Clickjacking
   - Tabjacking
-- [Evil Twin](https://github.com/n-vojin/Zastita-tim7/blob/main/Napadi%20i%20odbrane/Evil%20Twin.md)
+- [Evil Twin](https://github.com/n-vojin/Zastita-tim7/blob/main/Napadi%20i%20odbrane/DoS%20Napad.md)
 
 ### Mitigacije
 
@@ -61,9 +65,9 @@ Iako je WiFi mreža, i aplikativni softver predhodno zaštićen ne defaultim ši
 
 ![Back of router.png](./../Images/Back%20of%20router.png)
 
-## Mitigacije
+### Mitigacije
 
-Bolja kontrola pristupa.
+Bolja kontrola pristupa, ruter bi trebao da se nalazi na vidljviom mestu, ili pak u bolje osiguranim prostorijama.
 
 
 

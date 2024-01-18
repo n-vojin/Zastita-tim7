@@ -2,6 +2,12 @@
 
 <img title="" src="./../Images/WiFi granica poverenja.png" alt="loading-ag-205" style="zoom:55%;" data-align="center">
 
+## Stablo napada
+
+![loading-ag-239](./../Images/EvilTwin%20Stablo.png)
+
+## Uvod
+
 U današnje vreme bežični internet  je najrasprostranjeniji izvor pristupa internetu, bilo u kućama, stanovima, poslovnim prostorima ili javnim hotspotovima. Samim tim on prestavlja veoma atraktivno polje za napad. Pretnja koja je prisutna, kao što je zlonamerni blizanac. Napadač može imitirati legitimnu tačku pristupa (LAP - Legitimate Access Point), jer je lako falsifikovati naziv mreže (**SSID**) i **MAC** adresu (BSSID) legitimne tačke pristupa. Takva lažna tačka pristupa koja tvrdi da je legitimna poznata je kao zlonamerni blizanac (evil twin). Hotspot i softverske sposobnosti na klijentskim uređajima (laptop/mobilni) dovoljni su za pokretanje napada zlonamernog blizanca. Ako se klijenti povežu s zlonamernim blizancem, on može biti "čovek-u-sredini" između LAP-a i klijenata i prisluškivati ili manipulisati osetljivim podacima klijenata \[1\]. Tačka pristupa je zapravno javni ili bilo koji drugi ruter koji omogućava korisnicima pristup internetu.
 
 **SSID** je skraćenica za identifikator servisnog seta (service set identifier), koji je važan identifikator za bežične mreže. Bitno je napomenuti da je SSID naziv koji se dodeljuje Wi-Fi mreži prilikom postavljanja rutera. Neki primeri SSID-ova mogu uključivati "Familija Nikolić" ili "FTN WiFi".
@@ -48,11 +54,15 @@ Na javnim WiFi mrežama, neki od dobro poznatih napada uključuju pasivno sluša
 
 Predložen EvilScout sistem.
 
+Detekcija zlonamernog blizanca omogućena je proverom IP prefiksa distribuiranog kod tačke pristupa (LAP). Kako zlonamerni blizanac pokreće sopstveni DHCP server, moguće su dva scenarija. Zlonamerni blizanac ili distribuira IP adrese u istom IP prefiksu kao LAP, ili koristi drugi IP prefiks implementiran u NAT-u. Analizirali smo oba scenarija i pronašli anomalije kako bismo otkrili prisustvo zlonamernog blizanca bilo koje žrtve LAP-a u mreži. EvilScout okvir minimalno opterećuje LAP, jer ne zahteva dodatnu obradu i dovoljan je samo prvi paket svake komunikacije nakon uspostavljanja veze klijenta kako bi se detektovao zlonamerni blizanac [1].
+
+Takođe korisnici sa oštrim okom i dobrom intuicijom mogu da prepoznaju da postoje dve mreže, i da se odvežu sa javne tačke pristupa.
+
+**NAT** (Network address translation) je tehnika koju često koriste pružaoci internet usluga i organizacije kako bi omogućili više uređaja da dele jednu javnu IP adresu. Korišćenjem NAT-a, uređaji u privatnoj mreži mogu komunicirati sa uređajima na javnoj mreži bez potrebe da svaki uređaj ima svoju jedinstvenu IP adresu.
+
 
 
 ## Reference
-
-
 
 \[1\] [EvilScout: Detection and Mitigation of Evil Twin Attack in SDN Enabled WiFi Pragati Shrivastava , Mohd Saalim Jamal , and Kotaro Kataoka](https://sci-hub.se/10.1109/tnsm.2020.2972774)
 

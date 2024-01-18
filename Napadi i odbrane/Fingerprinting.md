@@ -2,6 +2,10 @@
 
 ![loading-ag-125](./../Images/Internet%20granica.png) 
 
+## Stablo napada
+
+## 
+
 ## Fingerprinting
 
 Fingerprinting rutera se odnosi na tehniku identifikacije i prikupljanja informacija o ruteru na osnovu njegovih jedinstvenih karakteristika i ponašanja. Iako je glavni cilj fingerprintinga rutera često poboljšanje bezbednosti mreže, postoji i rizik da napadač dođe do tih informacija i da njih iskoristi. Ako napadač identifikuje marke rutera i cilja određene proizvođače sa poznatim sigurnosnim propustima, može doći do zloupotrebe, pogotovo ako je reč o verzijama firmware-a koji imaju poznate propuste koji su lako iskoristivi.
@@ -36,7 +40,7 @@ Najveću ulogu u mitigaciji bi trebali da preduzmu sami proizvođači rutera i o
 
 Operateri mreže mogu se zaštititi od fingerprinting-a i svih njegovih potencijalnih bezbednosnih implikacija na različite načine. Prvi način je izuzetno jednostavan: koristite standardni početni TTL (iTTL) u ICMP paketima, kako preporučuje RFC1700 \[4\]. Pošto iTTL nije konfigurabilan od strane operatera, ova preporuka je upućena proizvođačima hardvera koji moraju anonimizovati svoje rutere tako što će se pobrinuti da svaki paket bude fordiran sa istim iTTL.
 
-Složenija tehnika je obfuskacija topologije kako bi se sprečilo otkrivanje potencijalnih ciljeva od strane napadača. Primer bi bio prilagoditi, na primer, NetHide za obfusciranje veza, ali i anonimizaciju rutera
+Složenija tehnika je maskiranje topologije kako bi se sprečilo otkrivanje potencijalnih ciljeva od strane napadača. Primer bi bio prilagoditi, na primer, NetHide za maskiranje veza, ali i anonimizaciju rutera
 
 Konačno, kao poslednje sredstvo, operater može odlučiti da potpuno isključi ICMP pakete (ili barem da ih filtrira na rubu, kao što se radi sa IGMP), čime efikasno skriva topologiju i hardversku infrastrukturu. Međutim, ovo rešenje donosi više nedostataka nego prednosti i često se smatra potpuno nepraktičnim, s obzirom da su traceroute i ping esencijalni alati za otklanjanje problema u mreži (poruke o greškama, provera povezanosti, PMTU otkrivanje, ...). Osim toga, situacija je još gora za IPv6, gde se ICMPv6 ne može tretirati kao pomoćna funkcija, kao što je to slučaj sa njegovim IPv4 pandanom, gde se paketi u većini slučajeva mogu odbaciti bez narušavanja funkcionalnosti mreže \[1\].
 

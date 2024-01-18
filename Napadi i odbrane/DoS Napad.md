@@ -2,6 +2,10 @@
 
 ![loading-ag-229](./../Images/Internet%20granica.png)
 
+## Stablo napada
+
+![loading-ag-138](./../Images/DoS%20stablo.png)
+
 ## Pretnja
 
 Kako je ruter zadužen za protok svih informacija koje se razmenjuju između LAN-a i WAN-a, on predstavlja atraktivnu metu za napade DoS vrste. Pogotovo zato što se lako može "prepalaviti" zahtevima. Potencijalni napadači mogu da to iskoriste i onemgouće ili znatno uspore protoke podataka kod krajnjih korisnika, kod kućnih mreža to možda ne bi prouzrokovalo neku veliku štetu, ali u mrežama koje koriste preduzeća, koja zavise od protoka velike količine informacija, bi se itekako mogla napraviti velika šteta. Napadač bi znatno usporio ili čak onemogućio preduzeću da pruža svoje usluge, što bi dovelo do velikih gubitaka.
@@ -29,7 +33,7 @@ Moderni ruteri danas imaju instalirane sisteme za detektovanje i sprečavanje Do
 Ako je napad u toku, prvi korak je zapravo uočavanje da je napad u toku, to može da uradi osoba sa iskustvom, ili sistem za detekciju DDoS napada, u koliko se takav nalazi na mreži. Kada se napad uoči načini odbrane su sledeći:
 
 - Menjanje statičke IP adrese rutera putem njegovog interfejsa.
-- ...
+- Ažuriranje firmware-a
 
 ## Low rate TCP Denial-of-Service attacks
 
